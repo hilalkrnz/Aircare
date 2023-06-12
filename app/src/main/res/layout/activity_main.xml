@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            tools:context=".ui.home.HomeFragment">
+
+            <LinearLayout
+                android:id="@+id/ll"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:padding="10dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:clipToPadding="false"
+                    android:orientation="horizontal">
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/card1"
+                        android:layout_width="match_parent"
+                        android:layout_height="300dp"
+                        android:layout_margin="5dp"
+                        android:clickable="true"
+                        android:foreground="?android:attr/selectableItemBackground">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_margin="8dp"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/barChartTitleTV"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="left"
+                                android:text="Temperature"
+                                android:textColor="@color/black"
+                                android:textSize="20sp"
+                                android:textStyle="normal" />
+
+                            <com.github.mikephil.charting.charts.LineChart
+                                android:id="@+id/tempratureLineChart"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_marginTop="10dp" />
+
+                        </LinearLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:clipToPadding="false"
+                    android:orientation="horizontal">
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/card2"
+                        android:layout_width="match_parent"
+                        android:layout_height="300dp"
+                        android:layout_margin="5dp"
+                        android:clickable="true"
+                        android:foreground="?android:attr/selectableItemBackground">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_margin="8dp"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/warehouseStatisticsTitleTV"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="left"
+                                android:text="Humidity"
+                                android:textColor="@color/black"
+                                android:textSize="20sp"
+                                android:textStyle="normal" />
+
+                            <com.github.mikephil.charting.charts.LineChart
+                                android:id="@+id/humidityLineChart"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_above="@+id/seekBar1" />
+                        </LinearLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</FrameLayout>
